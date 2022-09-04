@@ -1,5 +1,4 @@
-import math
-
+import math 
 def check(string):
     n = len(string)
     last = string[-1]
@@ -45,12 +44,14 @@ def showDup(string):
                     if string[i+1:-1] != string[i+(i+2):i]:
                         pass
                     else:
+                        '''
                         print("repeat found")
                         print(string)
                         print(i)
                         print(n+i)
                         print(string[i+1:-1])
                         print(string[i+(i+2):i])
+                        '''
                         return False
         return True
     else:
@@ -106,8 +107,7 @@ def recFunc(string, symbols={'A', 'B', 'C'}, k=2):
             pass
         else:
             if check(string+symbol):
-                recFunc(string+symbol)
-
+                recFunc(string+symbol) 
     '''
     if len(string) < 100:
         print('deadEnd')
@@ -117,15 +117,19 @@ def recFunc(string, symbols={'A', 'B', 'C'}, k=2):
             if symbol  == currSymbol:
                 pass
             else:
-                showDup(string+symbol)
-    '''
-    if len(string) > 980:
-        print(str(len(string)) + string) 
-        showDup(string+'A')
-        showDup(string+'B')
-        showDup(string+'C')
+                showDup(string+symbol) 
+                '''
+    
+    if len(string) > 700:
+        print(str(len(string))) 
+        #showDup(string+'A')
+        #showDup(string+'B')
+        #showDup(string+'C')
+        
 
 
 
-recFunc('A')
+#recFunc('ABACBABCBACBCABACBABCBACABACBABCABACBCABCBABCABACBABCBACBCABACBABCABACBCABCBABCABACBABCBACABACBABCABACBCABCBABCABACBABCACBACABACBABCBACBCABACBABCBACABACBABCABACBCABCBABCABACBABCBACBCABACBABCABACBCABCBABCABACBABCBACABACBABCABACBCABCBABCABACBABCACBCABACBABCBACBCABACBABCABACBCABCBABCABACBABCBACBCABACBABCABACBCACBABCBACBCABACBABCBACBCACBABCBACABACBABCBACBCABACBABCBACABACBABCABACBCABCBABCABACBABCBACBCABACBABCABACBCABCBABCABACBABCBACABACBABCABACBCABCBABCABACBABCACBACABACBABCBACBCABACBABCBACABACBABCABACBCABCBABCABACBABCBACBCABACBABCABACBCABCBABCABACBABCBACABACBABCABACBCABCBABCABACBCACBABCBACBCABACBABCBACBCACBABCBACABACBABCBACBCABACBABCBACABACBABCABACBCABCBABCABACBABCBACBCABACBABCABACBCABCBABCABACBABCBACABACBABCABACBCABCBABCABACBABCACBACABACBABCBACBCABACBABCBACABACBABCABACBCABCBABCABACBABCBACBCABACBABCABACBCABCBABCABACBABCBACABACBABCABACBCACBABCBACBCABACBABCBACBCACBABCBACABACBABCBACBCABACBABCBACABACBABCABA')
 
+recFunc('ABACABCACABACABCB')
+         #ABACABCACABACABCBA
